@@ -1,88 +1,88 @@
-# ⚡ Smart Transformer Health Monitoring System
+⚡ Smart Transformer Health Monitoring System
 
 ## 📖 Overview
-The Smart Transformer Health Monitoring System is an IoT-based solution designed to continuously monitor the operational health of electrical transformers in real time. 
+The Smart Transformer Health Monitoring System is a hardware-based solution designed to monitor key parameters of a transformer and prevent damage due to overheating, overload, or abnormal conditions.
 
-This system helps in preventing unexpected transformer failures by tracking critical parameters such as temperature, voltage, and load conditions, ensuring improved reliability and reduced maintenance costs.
+The system continuously measures temperature, voltage, and current, and automatically activates protective mechanisms like cooling and load control to ensure safe operation.
 
 ---
 
 ## 🚀 Key Features
-- 🌡️ Real-time temperature monitoring
-- ⚡ Voltage and current tracking
-- 🔔 Fault detection and alert system
-- 📊 Live data display using LCD/OLED
-- ☁️ IoT-based remote monitoring
-- 🛡️ Preventive maintenance support
+- 🌡️ Real-time temperature monitoring using DHT11
+- ⚡ Voltage sensing using voltage sensor module
+- 🔌 Current monitoring using ACS712 sensor
+- 🌀 Automatic cooling system (fan control)
+- 🔔 Fault indication using LED / relay switching
+- 📟 Live parameter display on 16x2 LCD
+- 🛡️ Basic transformer protection system
 
 ---
 
 ## 🛠️ Components Used
 - Arduino UNO
-- Temperature Sensor (e.g., DHT11 / LM35)
+- DHT11 Temperature Sensor
 - Voltage Sensor Module
-- Current Sensor (ACS712)
-- LCD / OLED Display
-- Wi-Fi Module (ESP8266 / ESP32)
-- Buzzer / LED indicators
-- Power Supply Unit
+- ACS712 Current Sensor
+- 16x2 LCD Display
+- Relay Module
+- Cooling Fan
+- Step-down Transformer (Power Supply)
+- Breadboard & Connecting Wires
+- LED Indicators
+- Soil Moisture Sensor *(optional – used for oil level simulation)*
 
 ---
 
 ## ⚙️ Working Principle
-The system continuously collects data from sensors attached to the transformer. 
+The system works by continuously monitoring transformer conditions through sensors:
 
-- Temperature sensors monitor overheating conditions  
-- Voltage and current sensors track electrical parameters  
-- The microcontroller processes the data and compares it with predefined thresholds  
-- If any abnormal condition is detected, an alert is triggered  
-- Data is displayed locally and can also be transmitted to a cloud platform for remote monitoring  
+- The **DHT11 sensor** measures temperature
+- The **voltage sensor** tracks input/output voltage levels
+- The **ACS712 sensor** measures load current
+- All sensor data is processed by the Arduino UNO
+
+### 🔁 Control Logic:
+- If temperature exceeds a threshold → **Cooling fan turns ON**
+- If current/voltage exceeds limits → **Relay triggers protection**
+- All real-time values are displayed on the **LCD screen**
 
 ---
 
 ## 🔄 System Architecture
-1. Sensors collect real-time data  
-2. Arduino processes the data  
-3. Data is displayed on LCD/OLED  
-4. Alerts are triggered in case of faults  
-5. Data is sent to cloud via Wi-Fi module  
+1. Sensors collect real-time data (Temperature, Voltage, Current)  
+2. Arduino UNO processes the sensor inputs  
+3. LCD displays live readings  
+4. Relay controls load/fault conditions  
+5. Cooling fan activates during overheating  
 
 ---
 
 ## 📊 Applications
-- Power distribution systems  
-- Smart grids  
-- Industrial transformer monitoring  
-- Substation automation  
+- Transformer monitoring (educational prototype)
+- Substation safety systems (basic level)
+- Industrial equipment monitoring
+- Electrical lab demonstrations
 
 ---
 
 ## 🎯 Advantages
-- Reduces transformer failure risk  
-- Enables predictive maintenance  
-- Low-cost and scalable solution  
-- Real-time monitoring and alerts  
-
----
-
-## 📸 Project Demo
-_Add images or videos of your project here_
-
----
+- Prevents overheating using automatic cooling
+- Simple and cost-effective implementation
+- Real-time monitoring with display
+- Easy to expand with IoT features
 
 ## 🔮 Future Enhancements
-- Integration with mobile app  
-- AI-based fault prediction  
-- Cloud dashboard (ThingSpeak / Blynk)  
-- GSM-based alert system  
+- IoT integration (ESP8266 / Blynk / ThingSpeak)
+- GSM alert system for faults
+- Oil level and gas detection sensors
+- Mobile app monitoring
+- Data logging for analysis
 
 ---
 
 ## 👩‍💻 Author
-**Your Name**  
-Electronics & Communication Engineering Student  
+Saranya Shree R S  
+Sai Samicsha Shri D  
+Dharini S  
+Electrical and Electronics Engineering
 
----
-
-## 📜 License
-This project is for educational purposes.
